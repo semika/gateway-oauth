@@ -1,0 +1,62 @@
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: product
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn
+    username: sa
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false
+#  security:
+#    oauth2:
+#      client:
+#        registration: # Base property prefix for OAuth2 configuration
+#          keycloak:   # ID of the client registration
+#            client-id: learn-gateway
+#            client-secret: 6fbbdaf5-6644-431d-9491-560c17259caf
+#            scope: openid,profile,email,address,phone
+#            authorization-grant-type: authorization_code
+#
+#            #The redirect URI is the path in the application that the end-user’s user-agent is redirected back to after they have authenticated
+#
+#            redirect-uri: http://localhost:9004/login/oauth2/code/keycloak   # {baseUrl}/login/oauth2/code/{registrationId}
+#            #redirectUriTemplate: '{baseUrl}/login/oauth2/code/{registrationId}'
+#        provider:
+#          keycloak: # Provider ID
+#            authorization-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/auth
+#            token-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/token
+#
+#            # User info URL can be used to get the user details
+#            user-info-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/userinfo
+#            user-name-attribute: preferred_username
+#            jwk-set-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/certs
+#            issuer-uri: http://localhost:8080/auth/realms/master
+  #cloud:
+  #  gateway:
+  #    default-filters: TokenRelay
+server:
+  port: 9004
+
+security:
+  client:
+    enable: true
+    basicAuth:
+      enable: true
+    jwtAuth:
+      enable: false
+  server:
+    enable: false
+
+# All Key clock end points can be taken from the following command
+# curl -X GET http://localhost:8080/auth/realms/master/.well-known/uma2-configuration
+
+
+
+# start commmand
+# java -jar -DH2-DATA=/Users/semikasi/h2-data target/user-0.0.1-SNAPSHOT.jar
+
+

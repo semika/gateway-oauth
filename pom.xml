@@ -24,17 +24,17 @@
 			<scope>test</scope>
 		</dependency>
 		
-<!--		<dependency>-->
-<!--			<groupId>iit.ase.cw</groupId>-->
-<!--			<artifactId>platform-security-client</artifactId>-->
-<!--			<version>0.0.1-SNAPSHOT</version>-->
-<!--		</dependency>-->
-
 		<dependency>
 			<groupId>iit.ase.cw</groupId>
+			<artifactId>platform-security-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<artifactId>platform-gateway-sercurity</artifactId>
 		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>iit.ase.cw</groupId>-->
+<!--			<version>0.0.1-SNAPSHOT</version>-->
+<!--			<artifactId>platform-gateway-sercurity</artifactId>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>mysql</groupId>

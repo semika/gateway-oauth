@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDetailPopulateService implements ThaproUserDetailsPopulateService {
     @Override
-    public ThaproUser findByUsername(AuthenticationRequest authenticationRequest) {
+    public ThaproUser findByUsername(String userName) {
         //Call the database and fetch the user object.
 //        UserDetails userDetails = User.withDefaultPasswordEncoder()
 //            .username("user")
@@ -27,8 +27,8 @@ public class UserDetailPopulateService implements ThaproUserDetailsPopulateServi
             .collect(Collectors.toList());
 
         return ThaproUser.builder()
-            .userId(authenticationRequest.getUsername())
-            .password(authenticationRequest.getPassword())
+            .userId(userName)
+            .password("user")
             .organizationId(1000)
             .roles(roleList)
             .build();

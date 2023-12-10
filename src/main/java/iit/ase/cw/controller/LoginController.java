@@ -29,7 +29,7 @@ public class LoginController {
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authenticationRequest)
         throws JsonProcessingException {
 
-        ThaproUser thaproUser = userDetailPopulateService.findByUsername(authenticationRequest);
+        ThaproUser thaproUser = userDetailPopulateService.findByUsername(authenticationRequest.getUsername());
 
         //validate password
         if (!thaproUser.getPassword().equals(authenticationRequest.getPassword())) {

@@ -45,9 +45,9 @@ security:
   client:
     enable: true
     basicAuth:
-      enable: true
-    jwtAuth:
       enable: false
+    jwtAuth:
+      enable: true
   server:
     enable: false
 
